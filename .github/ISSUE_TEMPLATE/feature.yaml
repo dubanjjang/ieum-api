@@ -1,0 +1,23 @@
+name: "✨ Feature Request"
+description: 새로운 기능을 제안합니다.
+title: "[FEAT]: "
+labels: ["feat"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        새로운 기능을 제안해주셔서 감사합니다! 🚀
+  - type: input
+    id: summary
+    attributes:
+      label: 기능 요약
+      description: 제안하는 기능을 한 줄로 요약해주세요.
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: 상세 내용
+      description: 기능의 필요성과 상세 동작을 적어주세요.
+    validations:
+      required: true
