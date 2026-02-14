@@ -1,0 +1,14 @@
+# 설정 파일
+application.yaml
+
+# Gradle 설정 및 캐시 (제외 필수)
+.gradle/
+build/
+
+# IntelliJ 설정 (제외 필수)
+.idea/
+*.iml
+
+# OS 관련 (선택적이나 추천)
+.DS_Store
+Thumbs.db
