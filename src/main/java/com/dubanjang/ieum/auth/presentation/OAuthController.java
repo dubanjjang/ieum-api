@@ -75,5 +75,3 @@ public class OAuthController {
         return URI.create(frontPageUri);
     }
 }
-
-//https://accounts.google.com/o/oauth2/v2/auth?client_id=422593134138-n8s0nkuc9md2m3cqovil55ip36natvtm.apps.googleusercontent.com&redirect_uri=http://localhost:8080/api/v1/oauth2/code/google&response_type=code&scope=email profile
