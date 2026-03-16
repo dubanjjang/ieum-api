@@ -46,7 +46,7 @@ public class JwtProvider {
 
     public AuthInfo validateToken(String token) {
         Claims claims = Jwts.parser()
-                .verifyWith(key) // 주입받은 Signing Key
+                .verifyWith(key)
                 .build()
                 .parseSignedClaims(token)
                 .getPayload();
@@ -55,7 +55,8 @@ public class JwtProvider {
         UserStatus status = UserStatus.valueOf(statusStr);
 
         String username = claims.get("username", String.class);
-        LocalDateTime withdrawnAt = LocalDateTime.parse(claims.get("withdrawnAt", String.class));
+        String withdrawnAtStr = claims.get("withdrawnAt", String.class);
+        LocalDateTime withdrawnAt = (withdrawnAtStr != null) ? LocalDateTime.parse(withdrawnAtStr) : null;
         return new AuthInfo(userId, status, username, withdrawnAt);
     }
 
