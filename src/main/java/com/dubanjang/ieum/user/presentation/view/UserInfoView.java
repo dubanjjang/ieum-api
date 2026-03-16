@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 @Builder
 @BaseSnakeDto
 public record UserInfoView(
-        long userId,
+        Long userId,
         String email,
         String nickname,
         String status,

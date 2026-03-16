@@ -5,7 +5,7 @@ import lombok.Builder;
 
 @Builder
 public record AuthResult(
-        long userId,
+        Long userId,
         String accessToken,
         String refreshToken,
         UserStatus status

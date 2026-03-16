@@ -5,7 +5,7 @@ import com.dubanjang.ieum.user.domain.UserStatus;
 import java.time.LocalDateTime;
 
 public record AuthInfo(
-        long userId,
+        Long userId,
         UserStatus status,
         String username,
         LocalDateTime withdrawnAt
