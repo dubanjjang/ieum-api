@@ -1,0 +1,11 @@
+### /api/v1/auth/login
+POST {{host}}/api/v1/auth/login
+content-type: application/json
+
+{
+  "email": "moomu.idh@gmail.com",
+  "password": "zkzkdhvpdl123!@#"
+}
+
+### /api/v1/auth/reissue
+POST {{host}}/api/v1/auth/reissue

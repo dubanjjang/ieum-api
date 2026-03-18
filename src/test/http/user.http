@@ -1,0 +1,44 @@
+### GET /api/v1/users/{userId}
+GET {{host}}/api/v1/users/2
+
+### POST /api/v1/users
+POST {{host}}/api/v1/users
+Content-Type: application/json
+
+{
+  "email": "moomu.idh@naver.com",
+  "password": "password123!",
+  "username": "lucy.d"
+}
+
+### GET /api/v1/users/me
+GET {{host}}/api/v1/users/me
+x-ieum-access: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwic3RhdHVzIjoiQUNUSVZFIiwiaWF0IjoxNzcxMzUwNDc2LCJleHAiOjE3NzEzNTA2NTZ9.30Hgl2f-DWM3X086MOUnADK4D0u_xkVhbkZVlpqVVVw
+
+### PATCH /api/v1/users/me/nickname
+PATCH {{host}}/api/v1/users/me/nickname
+x-ieum-access: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwiaWF0IjoxNzcxMzQzNDc1LCJleHAiOjE3NzEzNDM2NTV9.rMbeBo6pqU4I_vLTBpEenR0cBhJqYInWuLq1ZROMF3I
+Content-Type: application/json
+
+{
+  "username": "루시의일생루루루루루루"
+}
+
+### PATCH /api/v1/users/me/password
+PATCH {{host}}/api/v1/users/me/password
+x-ieum-access: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwiaWF0IjoxNzcxMzQ1MTMzLCJleHAiOjE3NzEzNDUzMTN9.2LBc2QX5ZteOv-KQQjA9PqG89PwdKsl3IxCZoCj6Iss
+Content-Type: application/json
+
+{
+  "oldPassword": "password123!",
+  "newPassword": "z12!",
+  "newConfirmedPassword": "z12!"
+}
+
+### 회원 탈퇴
+DELETE {{host}}/api/v1/users/me
+x-Ieum-Access: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwiaWF0IjoxNzcxMzQ4MDgwLCJleHAiOjE3NzEzNDgyNjB9.iRD7VAtz7i5x7b3W_RvJHhha3W2kCnaeVNtijzfD_ws
+
+### 회원 재활성화
+PATCH {{host}}/api/v1/users/me/reactive
+x-Ieum-Access: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwiaWF0IjoxNzcxMzQ4MDgwLCJleHAiOjE3NzEzNDgyNjB9.iRD7VAtz7i5x7b3W_RvJHhha3W2kCnaeVNtijzfD_ws
