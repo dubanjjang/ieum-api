@@ -6,7 +6,7 @@ import com.dubanjang.ieum.common.annotation.BaseSnakeDto;
 public record GoogleUserInfoResponse(
     String id,
     String email,
-    boolean verifiedEmail,
+    Boolean verifiedEmail,
     String name,
     String givenName,
     String familyName,
