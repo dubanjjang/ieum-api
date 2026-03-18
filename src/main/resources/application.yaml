@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: ieum
+  jackson:
+    mapper:
+      accept-case-insensitive-enums: true
+  config:
+    import:
+      - optional:classpath:env.properties
+      - optional:classpath:config/oauth.yaml
+      - optional:classpath:config/jwt.yaml
+      - optional:classpath:config/database.yaml
+      - optional:classpath:config/logging.yaml
+
+server:
+  port: 8080

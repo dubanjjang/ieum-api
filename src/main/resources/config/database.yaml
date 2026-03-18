@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: ${POSTGIS_ADDRESS}
+    username: ${POSTGIS_USER}
+    password: ${POSTGIS_PW}
+
+  data:
+    redis:
+      host: ${REDIS_HOST}
+      port: ${REDIS_PORT}
+      password: ${REDIS_PW}
+
+  jpa:
+    hibernate:
+      ddl-auto: ${JPA_HIBERNATE_DDL_AUTO:validate}
+    properties:
+      hibernate:
+        format_sql: ${JPA_HIBERNATE_PROPERTIES_HIBERNATE_FORMAT_SQL:false}
+        highlight_sql: ${JPA_HIBERNATE_PROPERTIES_HIBERNATE_HIGHLIGHT_SQL:false}
+        default_batch_fetch_size: ${JPA_HIBERNATE_PROPERTIES_HIBERNATE_DEFAULT_BATCH_FETCH_SIZE:30}
+    open-in-view: ${JPA_OPEN_IN_VIEW:false}
